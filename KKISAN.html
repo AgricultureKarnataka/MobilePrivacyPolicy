@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0050)https://kkisan.karnataka.gov.in/PrivacyPolicy.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no"><title>
+	KKISAN
+</title><meta name="description"><link rel="shortcut icon" type="image/icon" href="https://kkisan.karnataka.gov.in/images/ksda_header.png"><link type="text/css" rel="stylesheet" href="./KKISAN_files/icon.css"><link type="text/css" rel="stylesheet" href="./KKISAN_files/preload.css"><link type="text/css" rel="stylesheet" href="./KKISAN_files/plugins.css"><link type="text/css" rel="stylesheet" href="./KKISAN_files/style.css"><link type="text/css" rel="stylesheet" href="./KKISAN_files/width-boxed.css"><link type="text/css" rel="stylesheet" href="./KKISAN_files/fa_icon"><link type="text/css" href="./KKISAN_files/font.css" rel="stylesheet">
+    <!-- google fonts css start -->
+    <link href="./KKISAN_files/font.css" rel="stylesheet">
+    <!-- google fonts css end -->
+    <link type="text/css" href="./KKISAN_files/clock.css" rel="stylesheet">
+    <script type="text/javascript" src="./KKISAN_files/clock_jquery.js.download"></script>
+    <script src="./KKISAN_files/clock.js.download" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        function HandleOnclose() {
+            // alert("Close Session");
+            PageMethods.AbandonSession();
+            //           window.onbeforeunload = HandleOnclose;
+        }
+
+    </script>
+    <script type="text/javascript">
+
+        var clicked = false;
+        function CheckBrowser() {
+            if (clicked == false) {
+                //Browser closed
+                //alert('This is Browser closed');
+            }
+            else {
+                //redirected 
+                //alert('This is Browser redirected');
+                clicked = false;
+            }
+        }
+
+        function bodyUnload() {
+
+            if (clicked == false)//browser is closed
+            {
+
+
+                var request = GetRequest();
+
+                request.open("POST", "Login.aspx", false);
+                request.send();
+                //alert('This is close');
+            }
+        }
+        function GetRequest() {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();// code for IE7+, Firefox, Chrome, Opera, Safari
+            }
+            else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); // code for IE6, IE5
+            }
+            return xmlhttp;
+        }
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('body').css("font-size"));
+                //alert(size);
+                if ($(this).hasClass("plus")) {
+                    if (size == 25) {
+
+                    }
+                    else {
+                        size = size + 1;
+                    }
+                } else {
+                    if (size == 8) {
+
+                    }
+                    else {
+                        size = size - 1;
+                        if (size <= 1) {
+                            size = 1;
+                        }
+                    }
+                }
+                $('body').css("font-size", size);
+            });
+        });
+        function modelpopup() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+
+        }
+        function popupclose() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+
+        }
+    </script>
+    <style type="text/css">
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+
+
+            .sticky + .content {
+                padding-top: 102px;
+            }
+
+        body {
+            font-family: Arial;
+            font-size: 16px;
+        }
+
+        .font-button {
+            color: #ffff00;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .box {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: center; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 250px; /* Location of the box /
+            left: 0;
+            top: 0;
+            width: 70%; /* Full width 
+            height: 1000%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+            height: 600PX;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .blink_text_Elec1 {
+            animation: 2s blinker linear infinite;
+            -webkit-animation: 2s blinker linear infinite;
+            -moz-animation: 2s blinker linear infinite;
+            color: white !important;
+            font-weight: bold !important;
+            font-size: 20px !important;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    
+    
+    <script src="./KKISAN_files/md5.js.download" type="text/javascript"></script>
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+<body onunload="bodyUnload();" onclick="clicked=true;" class="check_gok_chrome_installed" data-new-gr-c-s-check-loaded="14.1206.0" data-gr-ext-installed="" style="overflow: visible;">
+    <div id="content">
+
+        <form method="post" action="https://kkisan.karnataka.gov.in/PrivacyPolicy.aspx" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="vhWpZW4yh9kYl9Ge5laul94ypN1aub+f2aBgRt8d9d2KzORIFzI6e+QAFYRYM5jip3JLDnPAdJ1Jz0CJc9eBtUGn8BlXVfzHhlyLcfap/TY=">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./KKISAN_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./KKISAN_files/MicrosoftAjax.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="./KKISAN_files/MicrosoftAjaxWebForms.js.download" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7650BFE2">
+</div>
+            <div class="ms-site-container">
+                <header class="clas_none ms-header ms-header-primary back_header">
+                    <div class="container-fluid fluid_padding_view">
+                        <div class="row">
+
+                            <div class="col-md-12 mobile_image">
+                                <img src="./KKISAN_files/mobile1.png" alt="" class="mobile_view_width">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid container_width">
+                        <img alt="KKISAN" class="kkisanfirst_logo" title="KKISAN" src="./KKISAN_files/KkisanHeader.jpg" style="width: 100%">
+                    </div>
+                </header>
+                <!-- Mobile View Start-->
+                <div class="container-fluid">
+                    <div class="row row_home_background">
+                        <div class="col-md-12">
+                            <p class="para_home_login">
+                                <a data-toggle="tooltip" title="" href="https://kkisan.karnataka.gov.in/Home.aspx" class="home_background" data-original-title="Home">
+                                    <i class="fa fa-home home_color"></i>
+                                </a>
+                                <a data-toggle="tooltip" title="" href="https://kkisan.karnataka.gov.in/Login.aspx" class="home_background" data-original-title="Login">
+                                    <i class="fa fa-user home_color"></i><span class="login_font">Login</span>
+                                </a>
+                                <a data-toggle="tooltip" title="" href="https://fruits.karnataka.gov.in/" target="_blank" class="home_background_right" data-original-title="Farmer Registration">
+                                    <i class="fa fa-user-plus home_color"></i><span class="login_font">Farmer Registration</span>
+                                </a>
+                                <a></a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Mobile View end-->
+
+                <!-- Desktop View Start-->
+                <div class="container-fluid fluid_background">
+                    <div class="row row_timepicker ">
+                        <div class="col-md-1">
+                            <p class="para_home">
+                                <a href="https://kkisan.karnataka.gov.in/Home.aspx">
+                                    <i class="fa fa-home home_color"></i>
+
+                                </a>
+                            </p>
+                            <a class="navbar-brand" href="https://kkisan.karnataka.gov.in/Dashboard.aspx" style="color: #badf0e; font-size: initial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Karnataka - Krishi Information Service and Networking</a>
+
+                        </div>
+                        <div class="col-md-1 clock_center">
+                            <div class="clock">
+                                <div id="Date">Thu 7 Nov 2024</div>
+                                <ul>
+                                    <li id="hours">23</li>
+                                    <li id="point">:</li>
+                                    <li id="min">59</li>
+                                    <li id="point">:</li>
+                                    <li id="sec">57</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="https://kkisan.karnataka.gov.in/Home.aspx" style="font-size: 16px !important;" target="_blank" class="blink_text  btn-circle-primary no-focus animated zoomInDown animation-delay-8"><i class="fa fa-user-plus users_right"></i><span>Citizen Login /  ನಾಗರಿಕ ಲಾಗಿನ್</span>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <h3 class="btn_login">
+                                <a href="https://kkisan.karnataka.gov.in/Login.aspx" class="blink_text  btn-circle-primary no-focus animated zoomInDown animation-delay-8">
+                                    <i class="fa fa-user users_right"></i><span>Login /  ಲಾಗಿನ್ ಮಾಡಿ </span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="col-md-2">
+                            <h3 class="btn_login">
+                                <a href="https://fruits.karnataka.gov.in/" target="_blank" class="blink_text  btn-circle-primary no-focus animated zoomInDown animation-delay-8">
+                                    <i class="fa fa-user-plus users_right"></i><span>Farmer Registration /  ರೈತರ  ನೋಂದಣಿ </span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="col-md-2 ">
+                            <h3 class="btn_notifications">
+                                <a href="https://kkisan.karnataka.gov.in/FarmerBeneficiaryApplicationDetail.aspx" class="blink_text  btn-circle-primary no-focus animated zoomInDown animation-delay-8">
+                                    <span>Farmer Beneficiary Application Status</span>
+                                </a>
+                            </h3>
+                        </div>
+                        
+                        <div class="col-md-2 ">
+                            <h3 class="btn_notifications">
+                                <a href="https://kkisan.karnataka.gov.in/Citizen/Home_DCBillGenStatusWise_Report.aspx" class="blink_text  btn-circle-primary no-focus animated zoomInDown animation-delay-8">
+                                    <span>KKisan Beneficiary Details / ಕ್ಕಿಸಾನ್ ಫಲಾನುಭವಿ ವಿವರಗಳು</span>
+                                </a>
+                            </h3>
+                        </div>
+                        
+                        <div class="col-md-2 ">
+                            <h3 class="btn_notifications">
+                                <a class="font-button  blink_text fa fa-wheelchair" onclick="modelpopup()">Screen Reader</a>
+                            </h3>
+                            <h3 class="btn_notifications">
+                                <a href="https://kkisan.karnataka.gov.in/ticket/" class="font-button  fa fa-recycle" target="_blank">&nbsp;Create Ticket</a>
+                            </h3>
+                        </div>
+                    </div>
+                    
+              
+                </div>
+                <!-- Desktop View End-->
+                <script type="text/javascript" src="./KKISAN_files/plugins.js.download"></script>
+                <script type="text/javascript" src="./KKISAN_files/app.js.download"></script>
+                <script type="text/javascript" src="./KKISAN_files/configurator.js.download"></script>
+                <script type="text/javascript" src="./KKISAN_files/home-generic-6.js.download"></script>
+                <script type="text/javascript" src="./KKISAN_files/portfolio.js.download"></script>
+                
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$scrmngr', 'form1', ['tctl00$ContentPlaceHolder1$updpnl','ContentPlaceHolder1_updpnl'], [], [], 3600, 'ctl00');
+//]]>
+</script>
+
+    <div id="ContentPlaceHolder1_updpnl">
+	
+
+            <section class="content">
+<div class="col-md-12">
+    <div style="padding-left: 100px;">
+    <h2>Privacy Policy for K-KISAN Mobile Application</h2>
+    <p>
+        This privacy policy governs your use of the K-KISAN mobile application that is hosted at Department of Agriculture Mobile App Account in Google Play Store. The contents published on these mobile applications were provided by the Department of Agriculture, Govt of Karnataka. This information provided through these applications may not have any legal sanctity and are for general reference only, unless otherwise specified. However, every effort has been made to provide accurate and reliable information through these applications. Users are advised to verify the correctness of the facts published here from the concerned authorities. 
+
+    </p>
+       
+
+    <h2>User Provided Information </h2>
+    <p>
+        When you visit the mobile application, it may use GPS technology (or other similar technology) to determine your current location in order to auto populate the location information for simplifying the entry work.
+    </p>
+
+
+    <h2>Automatically Collected Information </h2>
+    <p>When you visit the mobile application, it may use GPS technology (or other similar technology) to determine your current location in order to auto populate the location information for simplifying the entry work. If you do not want the app to use your location for the purposes set forth above, you should turn off the location services for the mobile application located in your account settings or in your mobile phone settings and/or within the mobile application. However, if the service provided by the Application requires the location services using GPS technology, such services offered by the application will not be available for you. We may disclose User provided and Automatically Collected Information: </p>
+
+    <p>• As required by law, such as to comply with a subpoena, or similar legal process. </p>
+
+    <p>• When we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request. </p>
+
+    <p>• With our trusted service providers who work on our behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement. You can stop all collection of information by the Application easily by uninstalling the Application. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network. </p>
+
+    <h2>Data Retention Policy, Managing Your Information </h2>
+
+    <p>We will retain User provided data for as long as you use the Application and for a reasonable time thereafter. We will retain Automatically Collected information also for a reasonable period of time depending on the nature of application and thereafter may store it in aggregate. Please note that some or all of the User Provided Data may be required in order for the Application to function properly. </p>
+
+    <h2>Misuse by Non-Targeted Users </h2>
+    <p>All mobile apps are meant for use by the targeted audience only. Misuse by nontargeted users should be prevented by owner of the mobile. </p>
+
+    <h2>Changes </h2>
+    <p>This Privacy Policy may be updated from time to time for any reason. We will notify you of any changes to our Privacy Policy by posting the new Privacy Policy here. You are advised to read this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes. You can check the history of this policy by clicking here. </p>
+    <h2>Your Consent</h2>
+    <p>By using the Application, you are consenting to our processing of your information as set forth in this Privacy Policy now and as amended by us. </p>
+    <h2>Contact us </h2>
+    <p>If you have any questions regarding privacy while using the Application, or have questions about our practices, please contact us via email at <b style="color:orangered">agri.kar2015@gmail.com</b> </p>
+</div>
+     </div>
+
+</section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            </div>
+        
+</div>
+
+                <footer class="ms-footer footer_home">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="content_footer">
+                                    <i class="fa fa-copyright"></i>
+                                Content Owned &amp; Site Maintained by Agriculture Department, Karnataka State Government.
+                            </p></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="./KKISAN_files/w3c.png">
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="https://www.india.gov.in/" target="_blank">
+                                        <img src="./KKISAN_files/india-gov-logo.png"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="https://digitalindia.gov.in/" target="_blank">
+                                        <img src="./KKISAN_files/digital-india-logo.png"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="https://data.gov.in/" target="_blank">
+                                        <img src="./KKISAN_files/data-gov-logo.png"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="https://www.pmindia.gov.in/en/" target="_blank">
+                                        <img src="./KKISAN_files/pm-india-logo.png"></a>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="https://www.nic.in/" target="_blank">
+                                        <img src="./KKISAN_files/logo.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <div class="btn-back-top">
+                    <a href="https://kkisan.karnataka.gov.in/PrivacyPolicy.aspx#" data-scroll="" id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised ">
+                        <i class="fa fa-long-arrow-up user_chevron"></i>
+                    </a>
+                </div>
+            </form></div>
+        
+        <div class="first_div animated zoomInDown animation-delay-8">
+            <span style="display: inline-block;">
+                <span class="span_side_one span_side wow flipInX animation-delay-5" style="visibility: visible; animation-name: flipInX;">
+                    <a target="_blank" class="second_div shareButtonNetfbLink" title="Photo Gallery" href="https://kkisan.karnataka.gov.in/Gallery.aspx"><i class="fa fa-picture-o fa-spin-hover user_gallery"></i></a>
+                </span>
+            </span>
+        </div>
+    
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 style="text-align: center">Screen Reader Access</h2>
+                <span class="close" onclick="popupclose()">×</span>
+            </div>
+            <div class="modal-body">
+                <p>The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.Following table lists the information about different screen readers:</p>
+                <table class="table - border" summary="Screen Reader">
+                    <tbody>
+                        <tr>
+                            <th>Sl. No.</th>
+                            <th>Screen Reader</th>
+                            <th>Website</th>
+                            <th>Free/ Commercial</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Non Visual Desktop Access (NVDA)</td>
+                            <td><a href="http://www.nvda-project.org/" target="_blank">http://www.nvda-project.org/</a><br>
+                                (External website that opens in a new window)</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>JAWS</td>
+                            <td><a href="http://www.freedomscientific.com/products/software/jaws/" target="_blank">http://www.freedomscientific.com</a>
+                                <br>
+                                (External website that opens in a new window)</td>
+                            <td>Commercial</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Window-Eyes</td>
+                            <td><a href="http://www.gwmicro.com/Window-Eyes/" target="_blank">http://www.gwmicro.com</a><br>
+                                (External website that opens in a new window)</td>
+                            <td>Commercial</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>System Access To Go</td>
+                            <td><a href="http://www.satogo.com/" target="_blank">http://www.satogo.com/</a><br>
+                                (External website that opens in a new window)</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>WebAnywhere</td>
+                            <td><a href="http://webinsight.cs.washington.edu/" target="_blank">http://webinsight.cs.washington.edu/</a>
+                                <br>
+                                (External website that opens in a new window)</td>
+                            <td>Free</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href="https://kkisan.karnataka.gov.in/PrivacyPolicy.aspx"></a><a class="lb-next" href="https://kkisan.karnataka.gov.in/PrivacyPolicy.aspx"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
